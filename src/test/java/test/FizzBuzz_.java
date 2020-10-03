@@ -30,14 +30,27 @@ public class FizzBuzz_ {
     @Test
     public void should_return_Fizz_when_it_is_multiple_of_5() {
         assertThat(fizzBuzz.of(5)).isEqualTo("Buzz");
+        assertThat(fizzBuzz.of(10)).isEqualTo("Buzz");
 
     }
 
     private class FizzBuzz {
         public String of(int number) {
-            if (number % 3 == 0) return "Fizz";
-            if (number % 5 == 0) return "Buzz";
+            if (isMultipleOfThree(number)) return "Fizz";
+            if (isMultipleOfFive(number)) return "Buzz";
             return String.valueOf(number);
         }
+
+        private boolean isMultipleOfFive(int number) {
+            if (number % 5 == 0) return true;
+            return false;
+        }
+
+        private boolean isMultipleOfThree(int number) {
+            if (number % 3 == 0) return true;
+            return false;
+        }
+
+
     }
 }
