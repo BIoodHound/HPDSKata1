@@ -9,13 +9,13 @@ public class FizzBuzz_ {
 
     @Test
     public void name() {
-        String s = new FizzBuzz().get(1);
-        assertEquals("1", s);
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("1", fizzBuzz.get(1));
     }
 
     private class FizzBuzz {
         public String get(int number) {
-            return null;
+            return "1";
         }
     }
 }
